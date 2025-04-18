@@ -1,0 +1,1777 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Professional cyber services in Kenya - KRA help, printing, CV writing, passport applications and more">
+  <title>Kenyan Cyber Café Services | Metasploit TECH 254 Nairobi</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #2c3e50;
+      --secondary-color: #e74c3c;
+      --accent-color: #3498db;
+      --light-color: #ecf0f1;
+      --dark-color: #2c3e50;
+      --success-color: #2ecc71;
+      --gradient-primary: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+      --gradient-secondary: linear-gradient(135deg, #e74c3c 0%, #f39c12 100%);
+      --gradient-success: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+      --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      --box-shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.2);
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+      line-height: 1.6;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    /* Preloader */
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--gradient-primary);
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.5s ease;
+    }
+
+    #preloader.fade-out {
+      opacity: 0;
+    }
+
+    .loader {
+      width: 50px;
+      height: 50px;
+      border: 5px solid rgba(255,255,255,0.3);
+      border-radius: 50%;
+      border-top-color: white;
+      animation: spin 1s ease-in-out infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--secondary-color);
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #c0392b;
+    }
+
+    .navbar {
+      background-color: var(--primary-color);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+      padding: 15px 0;
+      transition: all 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      padding: 10px 0;
+      background-color: rgba(44, 62, 80, 0.95);
+      backdrop-filter: blur(10px);
+    }
+
+    .navbar-brand {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.6rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-brand img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      padding: 0.5rem 1.2rem !important;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .nav-link:before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--secondary-color);
+      transition: all 0.3s ease;
+    }
+
+    .nav-link:hover:before {
+      width: 100%;
+    }
+
+    .nav-link:hover {
+      color: var(--secondary-color) !important;
+    }
+
+    .hero {
+      background: var(--gradient-primary), 
+                  url('https://images.unsplash.com/photo-1592496001020-ecb46d3c3d3c') center center/cover;
+      height: 100vh;
+      min-height: 700px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: linear-gradient(to top, #f8f9fa, transparent);
+      z-index: 1;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3.8rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 2.5rem;
+      opacity: 0.9;
+    }
+
+    .btn-primary {
+      background: var(--gradient-secondary);
+      border: none;
+      padding: 1rem 2.5rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
+    }
+
+    .btn-success {
+      background: var(--gradient-success);
+      border: none;
+      padding: 1rem 2.5rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+    }
+
+    .btn-success:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(46, 204, 113, 0.4);
+    }
+
+    .btn-outline-light {
+      border: 2px solid white;
+      padding: 1rem 2.5rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-outline-light:hover {
+      background: white;
+      color: var(--primary-color) !important;
+      transform: translateY(-3px);
+    }
+
+    .section-title {
+      position: relative;
+      margin-bottom: 3.5rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: var(--dark-color);
+      text-align: center;
+    }
+
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--gradient-secondary);
+      border-radius: 2px;
+    }
+
+    .card {
+      border: none;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: all 0.4s ease;
+      margin-bottom: 25px;
+      box-shadow: var(--box-shadow);
+      background: white;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--box-shadow-hover);
+    }
+
+    .card-img-top {
+      height: 220px;
+      object-fit: cover;
+      transition: all 0.5s ease;
+    }
+
+    .card:hover .card-img-top {
+      transform: scale(1.05);
+    }
+
+    .card-body {
+      padding: 2rem;
+    }
+
+    .card-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .card-text {
+      color: #666;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-sm {
+      padding: 0.5rem 1.2rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+    }
+
+    .bg-light {
+      background-color: var(--light-color) !important;
+    }
+
+    .form-control, .form-select {
+      padding: 1rem;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      transition: all 0.3s ease;
+    }
+
+    .form-control:focus, .form-select:focus {
+      border-color: var(--accent-color);
+      box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+    }
+
+    .admin-panel {
+      background: white;
+      border-radius: 15px;
+      padding: 2.5rem;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    }
+
+    .badge {
+      padding: 0.5em 1em;
+      font-weight: 600;
+      border-radius: 50px;
+    }
+
+    .contact-info i {
+      color: var(--secondary-color);
+      margin-right: 12px;
+      font-size: 1.3rem;
+      width: 25px;
+      text-align: center;
+    }
+
+    .contact-info p {
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .footer {
+      background: var(--gradient-primary);
+      color: white;
+      padding: 4rem 0 2rem;
+      position: relative;
+    }
+
+    .footer:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      background: var(--gradient-secondary);
+    }
+
+    .footer h5 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .footer h5:after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: var(--secondary-color);
+    }
+
+    .footer ul li {
+      margin-bottom: 0.8rem;
+    }
+
+    .footer ul li a {
+      color: rgba(255,255,255,0.8);
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .footer ul li a:hover {
+      color: white;
+      padding-left: 5px;
+    }
+
+    .social-icons {
+      margin-top: 1.5rem;
+    }
+
+    .social-icons a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      color: white;
+      border-radius: 50%;
+      margin-right: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      background: var(--secondary-color);
+      transform: translateY(-5px);
+    }
+
+    /* Floating social media sidebar */
+    .social-sidebar {
+      position: fixed;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 998;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .social-sidebar a {
+      width: 45px;
+      height: 45px;
+      background: white;
+      color: var(--primary-color);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 8px 0;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .social-sidebar a:hover {
+      background: var(--secondary-color);
+      color: white;
+      transform: translateX(5px);
+    }
+
+    /* Back to top button */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: var(--gradient-secondary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+      z-index: 999;
+      box-shadow: 0 5px 20px rgba(231, 76, 60, 0.3);
+    }
+
+    .back-to-top.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
+    }
+
+    /* Floating WhatsApp button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      left: 20px;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      z-index: 998;
+      box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
+      transition: all 0.3s ease;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      animation: none;
+    }
+
+    /* Testimonials */
+    .testimonial-card {
+      border-left: 4px solid var(--secondary-color);
+      transition: all 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--box-shadow-hover);
+    }
+
+    .testimonial-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    /* Stats Counter */
+    .stats-counter {
+      background: var(--gradient-primary);
+      padding: 80px 0;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stats-counter:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      background: var(--gradient-secondary);
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .stat-number {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .stat-label {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    /* Service Process */
+    .process-step {
+      position: relative;
+      padding-left: 80px;
+      margin-bottom: 40px;
+    }
+
+    .process-step:last-child {
+      margin-bottom: 0;
+    }
+
+    .step-number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 60px;
+      height: 60px;
+      background: var(--gradient-secondary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    /* Pricing Table */
+    .pricing-card {
+      border: none;
+      border-radius: 15px;
+      transition: all 0.3s ease;
+      overflow: hidden;
+      box-shadow: var(--box-shadow);
+      margin-bottom: 30px;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--box-shadow-hover);
+    }
+
+    .pricing-header {
+      background: var(--gradient-primary);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .pricing-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .pricing-price {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0;
+    }
+
+    .pricing-period {
+      opacity: 0.8;
+      font-size: 0.9rem;
+    }
+
+    .pricing-body {
+      padding: 30px;
+      background: white;
+    }
+
+    .pricing-features {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 30px;
+    }
+
+    .pricing-features li {
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .pricing-features li:last-child {
+      border-bottom: none;
+    }
+
+    /* Newsletter */
+    .newsletter {
+      background: var(--gradient-secondary);
+      color: white;
+      padding: 60px 0;
+      border-radius: 15px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--box-shadow);
+    }
+
+    .newsletter:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      background: var(--gradient-primary);
+    }
+
+    .newsletter-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .newsletter .form-control {
+      border-radius: 50px;
+      padding: 15px 20px;
+      border: none;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+      .hero h1 {
+        font-size: 3rem;
+      }
+      
+      .hero p {
+        font-size: 1.1rem;
+      }
+      
+      .social-sidebar {
+        display: none;
+      }
+
+      .stat-number {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        height: auto;
+        padding: 120px 0 80px;
+        min-height: auto;
+      }
+      
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .navbar-brand {
+        font-size: 1.3rem;
+      }
+      
+      .btn, .btn-outline-light {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+      }
+      
+      .section-title {
+        font-size: 1.8rem;
+      }
+
+      .process-step {
+        padding-left: 0;
+        padding-top: 80px;
+        text-align: center;
+      }
+
+      .step-number {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      .hero-content {
+        padding: 0 20px;
+      }
+      
+      .btn-group {
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      .btn, .btn-outline-light {
+        width: 100%;
+      }
+
+      .stat-number {
+        font-size: 2rem;
+      }
+
+      .stat-label {
+        font-size: 1rem;
+      }
+    }
+
+    /* Animated elements */
+    .animate-delay-1 {
+      animation-delay: 0.2s;
+    }
+    .animate-delay-2 {
+      animation-delay: 0.4s;
+    }
+    .animate-delay-3 {
+      animation-delay: 0.6s;
+    }
+
+    /* Particle background */
+    .particles-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    /* Floating animation */
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .floating {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    /* Gradient text */
+    .gradient-text {
+      background: var(--gradient-secondary);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Floating Social Media Sidebar -->
+  <div class="social-sidebar">
+    <a href="https://www.facebook.com/Metasploitkenya" class="animate__animated animate__fadeInLeft animate-delay-1"><i class="bi bi-facebook"></i></a>
+    <a href="https://www.facebook.com/Metasploitkenya" class="animate__animated animate__fadeInLeft animate-delay-2"><i class="bi bi-twitter"></i></a>
+    <a href="https://www.facebook.com/Metasploitkenya" class="animate__animated animate__fadeInLeft animate-delay-3"><i class="bi bi-instagram"></i></a>
+    <a href="https://www.facebook.com/Metasploitkenya" class="animate__animated animate__fadeInLeft"><i class="bi bi-linkedin"></i></a>
+  </div>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/254769055457" class="whatsapp-float animate__animated animate__fadeInUp animate__delay-1s">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="logo.png" alt="Metasploit TECH 254 Logo" class="d-inline-block align-top">
+        Metasploit TECH 254
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#process">How It Works</a></li>
+          <li class="nav-item"><a class="nav-link" href="#order">Order Online</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+            <a class="btn btn-outline-light" href="tel:+254769055457">
+              <i class="bi bi-telephone me-1"></i> Call Now
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero text-center">
+    <div class="particles-bg" id="particles-js"></div>
+    <div class="hero-content animate__animated animate__fadeIn">
+      <h1 class="animate__animated animate__fadeInDown">Professional <span class="gradient-text">Cyber Services</span> in Naivasha</h1>
+      <p class="animate__animated animate__fadeInDown animate__delay-1s">Fast, reliable and affordable cyber services including KRA Returns, Ecitizen, CV writing, passport applications and more</p>
+      <div class="d-flex gap-3 justify-content-center animate__animated animate__fadeInUp animate__delay-1s">
+        <a href="#order" class="btn btn-primary btn-lg">
+          <i class="bi bi-cart-check me-2"></i> Order Now
+        </a>
+        <a href="#services" class="btn btn-outline-light btn-lg">
+          <i class="bi bi-list-check me-2"></i> Our Services
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Counter -->
+  <section class="stats-counter">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-3 col-6 stat-item animate__animated animate__fadeIn">
+          <div class="stat-number" data-count="1500">0</div>
+          <div class="stat-label">Happy Clients</div>
+        </div>
+        <div class="col-md-3 col-6 stat-item animate__animated animate__fadeIn animate__delay-1s">
+          <div class="stat-number" data-count="24">0</div>
+          <div class="stat-label">Services Offered</div>
+        </div>
+        <div class="col-md-3 col-6 stat-item animate__animated animate__fadeIn animate__delay-2s">
+          <div class="stat-number" data-count="98">0</div>
+          <div class="stat-label">Success Rate</div>
+        </div>
+        <div class="col-md-3 col-6 stat-item animate__animated animate__fadeIn animate__delay-3s">
+          <div class="stat-number" data-count="6">0</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-5">
+    <div class="container">
+      <h2 class="text-center section-title animate__animated animate__fadeIn">Our Services</h2>
+      <p class="text-center mb-5 animate__animated animate__fadeIn animate__delay-1s">We offer a wide range of professional cyber services to meet all your needs</p>
+      
+      <div class="row g-4">
+        <div class="col-md-4 animate__animated animate__fadeInUp">
+          <div class="card h-100">
+            <img src="ecitizen.png" alt="KRA Help" class="card-img-top">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                  <i class="bi bi-building text-primary" style="font-size: 1.5rem;"></i>
+                </div>
+                <h5 class="card-title mb-0">E-citizen Services</h5>
+              </div>
+              <p class="card-text">Good Conduct application, Birth registration, National id replacement & more government services.</p>
+              <div class="d-flex justify-content-between align-items-center mt-4">
+                <span class="badge bg-primary bg-opacity-10 text-primary">Ecitizen</span>
+                <a href="#order" class="btn btn-sm btn-outline-primary">Order Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4 animate__animated animate__fadeInUp animate__delay-1s">
+          <div class="card h-100">
+            <img src="sha1.png" alt="Printing Service" class="card-img-top">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                  <i class="bi bi-printer text-primary" style="font-size: 1.5rem;"></i>
+                </div>
+                <h5 class="card-title mb-0">Social Health (SHA) </h5>
+              </div>
+              <p class="card-text">Your health matters to us and to the nation we registers news members and we also add dependants to the system, Be safe.</p>
+              <div class="d-flex justify-content-between align-items-center mt-4">
+                <span class="badge bg-primary bg-opacity-10 text-primary">Fast Service</span>
+                <a href="#order" class="btn btn-sm btn-outline-primary">Order Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4 animate__animated animate__fadeInUp animate__delay-2s">
+          <div class="card h-100">
+            <img src="cv.png" alt="CV Writing" class="card-img-top">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                  <i class="bi bi-file-earmark-person text-primary" style="font-size: 1.5rem;"></i>
+                </div>
+                <h5 class="card-title mb-0">CV & Job Applications</h5>
+              </div>
+              <p class="card-text">Professionally written CVs and cover letters tailored for Kenyan job platforms and requirements.</p>
+              <div class="d-flex justify-content-between align-items-center mt-4">
+                <span class="badge bg-primary bg-opacity-10 text-primary">professional</span>
+                <a href="#order" class="btn btn-sm btn-outline-primary">Order Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4 animate__animated animate__fadeInUp">
+          <div class="card h-100">
+            <img src="passport.png" alt="Passport Application" class="card-img-top">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                  <i class="bi bi-passport text-primary" style="font-size: 1.5rem;"></i>
+                </div>
+                <h5 class="card-title mb-0">Passport Application</h5>
+              </div>
+              <p class="card-text">Complete passport application assistance including document preparation and tracking.</p>
+              <div class="d-flex justify-content-between align-items-center mt-4">
+                <span class="badge bg-primary bg-opacity-10 text-primary">passport</span>
+                <a href="#order" class="btn btn-sm btn-outline-primary">Order Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4 animate__animated animate__fadeInUp animate__delay-1s">
+          <div class="card h-100">
+            <img src="ntsa.png" alt="HELB Services" class="card-img-top">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                  <i class="bi bi-mortarboard text-primary" style="font-size: 1.5rem;"></i>
+                </div>
+                <h5 class="card-title mb-0">National Transport Authority (NTSA)</h5>
+              </div>
+              <p class="card-text">Application of driving liscence, renewal of driving liscence, Test bookings and many more services.</p>
+              <div class="d-flex justify-content-between align-items-center mt-4">
+                <span class="badge bg-primary bg-opacity-10 text-primary">NTSA HELP</span>
+                <a href="#order" class="btn btn-sm btn-outline-primary">Order Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4 animate__animated animate__fadeInUp animate__delay-2s">
+          <div class="card h-100">
+            <img src="itax.png" alt="Form Filling" class="card-img-top">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                  <i class="bi bi-file-earmark-text text-primary" style="font-size: 1.5rem;"></i>
+                </div>
+                <h5 class="card-title mb-0">KRA SERVICES</h5>
+              </div>
+              <p class="card-text">Registration for new kra pins, KRA nill returns, KRA employment Returns, lost kra number tracking and many more services.</p>
+              <div class="d-flex justify-content-between align-items-center mt-4">
+                <span class="badge bg-primary bg-opacity-10 text-primary">Quick Service</span>
+                <a href="#order" class="btn btn-sm btn-outline-primary">Order Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section id="process" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center section-title animate__animated animate__fadeIn">How It Works</h2>
+      <p class="text-center mb-5 animate__animated animate__fadeIn">Simple steps to get your services completed</p>
+      
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="process-step animate__animated animate__fadeInLeft">
+            <div class="step-number">1</div>
+            <h4>Place Your Order</h4>
+            <p>Fill out our online order form with your service requirements and any special instructions. You can also visit our physical location in Naivasha.</p>
+          </div>
+          
+          <div class="process-step animate__animated animate__fadeInLeft animate__delay-1s">
+            <div class="step-number">2</div>
+            <h4>Make Payment</h4>
+            <p>We'll confirm your order details and provide payment instructions. You can pay via M-Pesa or cash at our office.</p>
+          </div>
+          
+          <div class="process-step animate__animated animate__fadeInLeft animate__delay-2s">
+            <div class="step-number">3</div>
+            <h4>Service Completion</h4>
+            <p>Our experts will complete your requested service efficiently. We'll keep you updated on progress and any additional requirements.</p>
+          </div>
+          
+          <div class="process-step animate__animated animate__fadeInLeft animate__delay-3s">
+            <div class="step-number">4</div>
+            <h4>Delivery/Collection</h4>
+            <p>Once completed, we'll notify you for collection or deliver the completed service digitally as per your preference.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order Section -->
+  <section id="order" class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="text-center mb-5 animate__animated animate__fadeIn">
+            <h2 class="section-title">Order Services Online</h2>
+            <p>Fill out the form below and we'll get back to you within 30 minutes</p>
+          </div>
+          
+          <div class="card border-0 shadow animate__animated animate__fadeInUp">
+            <div class="card-body p-4 p-md-5">
+              <form id="orderForm" class="row g-3 needs-validation" novalidate>
+                <div class="col-md-6">
+                  <label for="name" class="form-label">Full Name *</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-person"></i></span>
+                    <input type="text" class="form-control" id="name" placeholder="John Mwangi" required>
+                  </div>
+                  <div class="invalid-feedback">
+                    Please provide your full name.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="phone" class="form-label">Phone Number *</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-phone"></i></span>
+                    <input type="tel" class="form-control" id="phone" placeholder="0712345678" required>
+                  </div>
+                  <div class="invalid-feedback">
+                    Please provide a valid phone number.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Email</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                    <input type="email" class="form-control" id="email" placeholder="john@example.com">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="service" class="form-label">Select Service *</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-list-check"></i></span>
+                    <select id="service" class="form-select" required>
+                      <option value="" selected disabled>Choose a service...</option>
+                      <option>Graphics and logo designs</option>
+                      <option>Website designing</option>
+                      <option>Photocopying</option>
+                      <option>KRA PIN Registration</option>
+                      <option>Tax Filing Assistance</option>
+                      <option>Ecitizen Support</option>
+                      <option>CV Writing</option>
+                      <option>Passport Application</option>
+                      <option>HELB Loan Application</option>
+                      <option>Document Scanning</option>
+                      <option>Other Service</option>
+                    </select>
+                  </div>
+                  <div class="invalid-feedback">
+                    Please select a service.
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label for="file" class="form-label">Upload File (if applicable)</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-paperclip"></i></span>
+                    <input class="form-control" type="file" id="file">
+                  </div>
+                  <div class="form-text">Max file size: 5MB (PDF, DOC, JPG, PNG)</div>
+                </div>
+                <div class="col-12">
+                  <label for="message" class="form-label">Additional Instructions</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-chat-left-text"></i></span>
+                    <textarea class="form-control" id="message" rows="3" placeholder="Please provide any special instructions..."></textarea>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="agree" required>
+                    <label class="form-check-label" for="agree">
+                      I agree to the <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">terms of service</a> and <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">privacy policy</a>
+                    </label>
+                    <div class="invalid-feedback">
+                      You must agree before submitting.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 mt-4">
+                  <button type="submit" class="btn btn-primary btn-lg w-100">
+                    <i class="bi bi-send me-2"></i> Submit & Pay via M-Pesa
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center section-title animate__animated animate__fadeIn">What Our Clients Say</h2>
+      <p class="text-center mb-5 animate__animated animate__fadeIn">Hear from our satisfied customers</p>
+      
+      <div class="row">
+        <div class="col-md-4 mb-4 animate__animated animate__fadeInUp">
+          <div class="card testimonial-card h-100">
+            <div class="card-body text-center p-4">
+              <img src="" alt="Client" class="testimonial-img mb-3">
+              <h5 class="card-title">Jane Wanjiku</h5>
+              <div class="text-warning mb-3">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="card-text">"Metasploit TECH helped me with my passport application and it was processed in record time. Very professional service!"</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-4 animate__animated animate__fadeInUp animate__delay-1s">
+          <div class="card testimonial-card h-100">
+            <div class="card-body text-center p-4">
+              <img src="" alt="Client" class="testimonial-img mb-3">
+              <h5 class="card-title">Michael Otieno</h5>
+              <div class="text-warning mb-3">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </div>
+              <p class="card-text">"Their CV writing service got me multiple interview calls within a week. The quality was excellent and worth every shilling."</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-4 animate__animated animate__fadeInUp animate__delay-2s">
+          <div class="card testimonial-card h-100">
+            <div class="card-body text-center p-4">
+              <img src="" alt="Client" class="testimonial-img mb-3">
+              <h5 class="card-title">Sarah Kamau</h5>
+              <div class="text-warning mb-3">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="card-text">"I was struggling with KRA returns until I found this cyber. They made it so easy and saved me from penalties. Highly recommended!"</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="newsletter animate__animated animate__fadeIn">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h3 class="text-white mb-4">Subscribe to Our Newsletter</h3>
+            <p class="text-white mb-5">Get updates on new services, promotions and government service alerts</p>
+            
+            <form class="newsletter-form">
+              <div class="input-group mb-3">
+                <input type="email" class="form-control" placeholder="Your email address" required>
+                <button class="btn btn-dark" type="submit">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="text-center section-title animate__animated animate__fadeIn">Contact Us</h2>
+      <p class="text-center mb-5 animate__animated animate__fadeIn">Get in touch with our team for any inquiries</p>
+      
+      <div class="row animate__animated animate__fadeInUp">
+        <div class="col-lg-5 mb-5 mb-lg-0">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body p-4">
+              <h4 class="mb-4">Our Office</h4>
+              <div class="contact-info">
+                <p><i class="bi bi-geo-alt"></i> Naivasha, Kenya</p>
+                <p><i class="bi bi-telephone"></i> <a href="tel:+254769055457">+254 769 055457</a></p>
+                <p><i class="bi bi-envelope"></i> <a href="mailto:ndirituj567@gmail.com">ndirituj567@gmail.com</a></p>
+                <p><i class="bi bi-clock"></i> Mon-Fri: 8:00 AM - 7:00 PM<br>
+                Sat: 9:00 AM - 4:00 PM</p>
+              </div>
+              
+              <div class="mt-5">
+                <h5 class="mb-3">Follow Us</h5>
+                <div class="social-icons">
+                  <a href="https://www.facebook.com/Metasploitkenya" class="animate__animated animate__fadeIn"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.facebook.com/Metasploitkenya" class="animate__animated animate__fadeIn animate__delay-1s"><i class="bi bi-twitter"></i></a>
+                  <a href="https://www.facebook.com/Metasploitkenya" class="animate__animated animate__fadeIn animate__delay-2s"><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.facebook.com/Metasploitkenya" class="animate__animated animate__fadeIn animate__delay-3s"><i class="bi bi-linkedin"></i></a>
+                  <a href="https://www.facebook.com/Metasploitkenya" class="animate__animated animate__fadeIn animate__delay-4s"><i class="bi bi-youtube"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body p-4">
+              <h4 class="mb-4">Send Us a Message</h4>
+              <form id="contactForm">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="contact-name" class="form-label">Your Name *</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-person"></i></span>
+                      <input type="text" class="form-control" id="contact-name" required>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="contact-email" class="form-label">Your Email *</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                      <input type="email" class="form-control" id="contact-email" required>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label for="contact-subject" class="form-label">Subject</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-chat-square-text"></i></span>
+                      <input type="text" class="form-control" id="contact-subject">
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label for="contact-message" class="form-label">Message *</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-chat-left-text"></i></span>
+                      <textarea class="form-control" id="contact-message" rows="4" required></textarea>
+                    </div>
+                  </div>
+                  <div class="col-12 mt-3">
+                    <button type="submit" class="btn btn-primary">
+                      <i class="bi bi-send me-2"></i> Send Message
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <div class="container-fluid p-0 animate__animated animate__fadeIn">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.033085793062!2d36.4318653147536!3d-0.7175993999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18292e3e5b5e5b5b%3A0x4e1b3e5b5e5b5b5b!2sNaivasha%2C%20Kenya!5e0!3m2!1sen!2ske!4v1623943476842!5m2!1sen!2ske" 
+            width="100%" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy"></iframe>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <div class="d-flex align-items-center mb-3">
+            <img src="" alt="" class="me-2">
+            <h4 class="mb-0">Metasploit TECH 254</h4>
+          </div>
+          <p class="mb-4">Providing professional cyber services in Naivasha and country wide since 2017. Fast, reliable and affordable services for all your digital needs.</p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/Metasploitkenya"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.facebook.com/Metasploitkenya"><i class="bi bi-twitter"></i></a>
+            <a href="https://www.facebook.com/Metasploitkenya"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.facebook.com/Metasploitkenya"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#process">How It Works</a></li>
+            <li><a href="#order">Order Online</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+          <h5>Services</h5>
+          <ul class="list-unstyled">
+            <li><a href="#services">KRA Services</a></li>
+            <li><a href="#services">Printing</a></li>
+            <li><a href="#services">CV Writing</a></li>
+            <li><a href="#services">Passport Help</a></li>
+            <li><a href="#services">ECITIZEN</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <h5>Contact Info</h5>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-geo-alt"></i> NAIVASHA</li>
+            <li><i class="bi bi-telephone"></i> <a href="tel:+254769055457">+254 769 055457</a></li>
+            <li><i class="bi bi-envelope"></i> <a href="mailto:ndirituj567@gmail.com">ndirituj567@gmail.com</a></li>
+            <li><i class="bi bi-clock"></i> Mon-Sat: 8:00 AM - 7:00 PM</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="mt-5 mb-4" style="border-color: rgba(255,255,255,0.1);">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <p>&copy; 2025 Metasploit TECH 254. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <p>Designed by Ndiritu Metasploit <i class="bi bi-heart-fill text-danger"></i> in Naivasha Kenya</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <div class="back-to-top">
+    <i class="bi bi-arrow-up"></i>
+  </div>
+
+  <!-- Terms Modal -->
+  <div class="modal fade" id="termsModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Terms of Service</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h6>1. Service Agreement</h6>
+          <p>By using our services, you agree to these terms and conditions. Metasploit TECH 254 provides cyber services including but not limited to printing, document processing, government services assistance, and other related services.</p>
+          
+          <h6>2. Payment Terms</h6>
+          <p>All services must be paid for in advance unless otherwise agreed. We accept M-Pesa payments and cash at our physical location. Prices are subject to change without notice.</p>
+          
+          <h6>3. Service Delivery</h6>
+          <p>We strive to complete all services within the estimated timeframes provided. However, some government services may be subject to processing times beyond our control.</p>
+          
+          <h6>4. Refund Policy</h6>
+          <p>Refunds are provided at our discretion for services not rendered. Once work has begun on a service, refunds may be partial or not available.</p>
+          
+          <h6>5. Data Privacy</h6>
+          <p>We respect your privacy and handle all personal information in accordance with our Privacy Policy. However, we cannot be responsible for information you choose to share publicly.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Privacy Modal -->
+  <div class="modal fade" id="privacyModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Privacy Policy</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h6>1. Information Collection</h6>
+          <p>We collect personal information when you use our services, including name, contact details, and documents needed to process your requested services.</p>
+          
+          <h6>2. Use of Information</h6>
+          <p>Your information is used solely to provide the services you request. We do not sell or share your information with third parties except as necessary to complete your requested services.</p>
+          
+          <h6>3. Data Security</h6>
+          <p>We implement appropriate security measures to protect your personal information. However, no internet transmission is completely secure, and we cannot guarantee absolute security.</p>
+          
+          <h6>4. Information Retention</h6>
+          <p>We retain your information only as long as necessary to provide services and as required by Kenyan law. You may request deletion of your information at any time.</p>
+          
+          <h6>5. Your Rights</h6>
+          <p>You have the right to access, correct, or delete your personal information. Contact us to exercise these rights.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Toast -->
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div id="successToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header bg-success text-white">
+        <strong class="me-auto">Success</strong>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Your message has been sent successfully. We'll get back to you soon!
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    // Preloader
+    window.addEventListener('load', function() {
+      const preloader = document.getElementById('preloader');
+      setTimeout(function() {
+        preloader.classList.add('fade-out');
+        setTimeout(function() {
+          preloader.style.display = 'none';
+        }, 500);
+      }, 1000);
+    });
+
+    // Back to top button
+    const backToTopButton = document.querySelector('.back-to-top');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.add('active');
+        document.querySelector('.navbar').classList.add('scrolled');
+      } else {
+        backToTopButton.classList.remove('active');
+        document.querySelector('.navbar').classList.remove('scrolled');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Form validation and submission
+    (function () {
+      'use strict'
+      
+      const forms = document.querySelectorAll('.needs-validation')
+      
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          } else {
+            event.preventDefault();
+            sendFormData(form);
+          }
+          
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })();
+
+    // Contact form submission
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      sendFormData(this, 'contact');
+    });
+
+    // Function to send form data
+    function sendFormData(form, type = 'order') {
+      const formData = new FormData(form);
+      let subject, body;
+
+      if (type === 'order') {
+        subject = 'New Service Order: ' + formData.get('service');
+        body = `New service order received:\n\n` +
+               `Name: ${formData.get('name')}\n` +
+               `Phone: ${formData.get('phone')}\n` +
+               `Email: ${formData.get('email') || 'Not provided'}\n` +
+               `Service: ${formData.get('service')}\n` +
+               `Message: ${formData.get('message') || 'No additional instructions'}`;
+      } else {
+        subject = 'New Contact Message: ' + (formData.get('contact-subject') || 'No Subject');
+        body = `New contact message received:\n\n` +
+               `Name: ${formData.get('contact-name')}\n` +
+               `Email: ${formData.get('contact-email')}\n` +
+               `Subject: ${formData.get('contact-subject') || 'No subject'}\n` +
+               `Message: ${formData.get('contact-message')}`;
+      }
+
+      // Send email using mailto link
+      const mailtoLink = `mailto:ndirituj567@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailtoLink;
+
+      // Show success toast
+      const toast = new bootstrap.Toast(document.getElementById('successToast'));
+      toast.show();
+
+      // Reset form
+      form.reset();
+      form.classList.remove('was-validated');
+    }
+
+    // Call button functionality
+    document.querySelector('a[href="tel:+254769055457"]').addEventListener('click', function(e) {
+      // You can add tracking or other functionality here if needed
+      window.location.href = 'tel:+254769055457';
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Animation on scroll
+    function animateOnScroll() {
+      const elements = document.querySelectorAll('.animate__animated');
+      
+      elements.forEach(element => {
+        const elementPosition = element.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.2;
+        
+        if (elementPosition < screenPosition) {
+          const animationClass = element.classList[1];
+          element.classList.add(animationClass);
+        }
+      });
+    }
+    
+    window.addEventListener('scroll', animateOnScroll);
+    window.addEventListener('load', animateOnScroll);
+
+    // Stats counter animation
+    function animateStats() {
+      const statItems = document.querySelectorAll('.stat-item');
+      
+      statItems.forEach(item => {
+        const numberElement = item.querySelector('.stat-number');
+        const target = parseInt(numberElement.getAttribute('data-count'));
+        const duration = 2000;
+        const start = 0;
+        const increment = target / (duration / 16);
+        let current = start;
+        
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            clearInterval(timer);
+            current = target;
+          }
+          numberElement.textContent = Math.floor(current);
+        }, 16);
+      });
+    }
+
+    // Initialize stats counter when in view
+    const statsSection = document.querySelector('.stats-counter');
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        animateStats();
+        observer.unobserve(statsSection);
+      }
+    });
+
+    observer.observe(statsSection);
+
+    // Particles.js configuration
+    particlesJS('particles-js', {
+      "particles": {
+        "number": {
+          "value": 80,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#ffffff"
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          },
+          "polygon": {
+            "nb_sides": 5
+          }
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": false,
+          "anim": {
+            "enable": false,
+            "speed": 1,
+            "opacity_min": 0.1,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 3,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 40,
+            "size_min": 0.1,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "grab"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 140,
+            "line_linked": {
+              "opacity": 1
+            }
+          },
+          "bubble": {
+            "distance": 400,
+            "size": 40,
+            "duration": 2,
+            "opacity": 8,
+            "speed": 3
+          },
+          "repulse": {
+            "distance": 200,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+</body>
+
+</html>
+
+
+
+<!-- Add before </body> -->
+<script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+<script>
+  const firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "your-project.firebaseapp.com",
+    projectId: "your-project",
+    storageBucket: "your-project.appspot.com",
+    messagingSenderId: "123456789",
+    appId: "1:123456789:web:abc123def456"
+  };
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+
+  // Save order to Firestore
+  function submitOrder() {
+    db.collection("orders").add({
+      name: document.getElementById("name").value,
+      phone: document.getElementById("phone").value,
+      service: document.getElementById("service").value,
+      status: "pending"
+    }).then(() => alert("Order submitted!"));
+  }
+</script>
