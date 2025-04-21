@@ -1097,7 +1097,7 @@
     <label for="email" class="form-label">Email</label>
     <div class="input-group">
       <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-      <input type="email" class="form-control" id="email" name="email" placeholder="john@example.com">
+      <input type="email" class="form-control" name="newsletter-email" id="email" name="email" placeholder="john@example.com">
     </div>
   </div>
 
@@ -1234,9 +1234,9 @@
             <h3 class="text-white mb-4">Subscribe to Our Newsletter</h3>
             <p class="text-white mb-5">Get updates on new services, promotions and government service alerts</p>
             
-            <form class="newsletter-form">
+            <form action="https://formsubmit.co/ndirituj567@gmail.com" method="POST" class="newsletter-form">
               <div class="input-group mb-3">
-                <input type="email" class="form-control" placeholder="Your email address" required>
+                <input type="email" class="form-control" name="newsletter-email" placeholder="Your email address" required>
                 <button class="btn btn-dark" type="submit">Subscribe</button>
               </div>
             </form>
@@ -1288,28 +1288,28 @@
                     <label for="contact-name" class="form-label">Your Name *</label>
                     <div class="input-group">
                       <span class="input-group-text"><i class="bi bi-person"></i></span>
-                      <input type="text" class="form-control" id="contact-name" required>
+                      <input type="text" class="form-control" id="contact-name" name="contact-name" required>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <label for="contact-email" class="form-label">Your Email *</label>
                     <div class="input-group">
                       <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                      <input type="email" class="form-control" id="contact-email" required>
+                      <input type="email" class="form-control" name="newsletter-email" id="contact-email" name="contact-email" required>
                     </div>
                   </div>
                   <div class="col-12">
                     <label for="contact-subject" class="form-label">Subject</label>
                     <div class="input-group">
                       <span class="input-group-text"><i class="bi bi-chat-square-text"></i></span>
-                      <input type="text" class="form-control" id="contact-subject">
+                      <input type="text" class="form-control" id="contact-subject" name="contact-subject">
                     </div>
                   </div>
                   <div class="col-12">
                     <label for="contact-message" class="form-label">Message *</label>
                     <div class="input-group">
                       <span class="input-group-text"><i class="bi bi-chat-left-text"></i></span>
-                      <textarea class="form-control" id="contact-message" rows="4" required></textarea>
+                      <textarea class="form-control" id="contact-message" name="contact-message" rows="4" required></textarea>
                     </div>
                   </div>
                   <div class="col-12 mt-3">
